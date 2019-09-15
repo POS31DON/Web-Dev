@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Future Kingdom</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="POS31DON" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+             
+            
+            $("#overlay_arrow").click(function(){
+                $(".overlay").slideUp(1000);
+                $("html, body").animate({
+                    scrollTop: $('.home').offset().top
+                }, 1);
+                
+           
+            });
+             $("#overlay_arrow_again").click(function(){
+                $(".overlay").slideDown(1000);
+                        
+        
+            });
+            
+            $("a.scroll").click(function() {
+                var target = $(this).attr('href');
+                $('html,body').animate({
+                    scrollTop: $(target).offset().top - 60},1500);
+               
+            });
+            
+            $(window).scroll( function(){
+
+                $('.main_div').each(function(i){
+                    var bottom_div = $(this).position().top + $(this).outerHeight();
+                var bottom_window = $(window).scrollTop() + $(window).height() + 300;
+                
+                if(bottom_window > bottom_div)
+                    {
+                        $(this).animate({'opacity':'1'},500);
+                        
+                      
+                           $(this).find("h1").animate({'opacity':'1'},1);
+                           
+                       
+                      
+                    }
+                });             
+            });
+            
+        });
+    </script>
+</head>
+<body alink="#ffffff" link="#ffffff" vlink="#ffffff">
+   <div class="overlay">
+      <div class="overlay_middle">
+         <div id="overlay_arrow">
+            &#10094;
+         </div>
+      </div>
+   </div>
+   <div class="navbar">
+      <img src="assets/images/logo.png" height="21px" width="25px"> 
+      <a href="#2" class="scroll">Contact</a>
+      <a href="#3" class="scroll">Press Review</a>
+      <a href="#4" class="scroll">First Look</a>
+      <a href="#5" class="scroll"> Features</a>
+      <a id="overlay_arrow_again"> Home </a>
+   </div>
+   <div class="home">
+  <div class="text">
+    <h1 style="font-size:80px">Future Kingdom</h1>
+    <h2>Vector version of the all time favourite Mario</h2>
+    <button class="btn"><a style="text-decoration: none" href="#5">&#10094;</a></button>
+  </div>
+</div>
+    
+    
+     <div class="features commondiv main_div" id="display" >
+      <div class="div_text">
+         <center>
+            <a name="5"></a><h1>Features</h1>
+            <hr width=200px>
+            <h3>Version 0.1<br> </h3>
+            <h3>
+
+• Level up and get your hands on more gold to unlock epic items and gear for your party.<br>
+
+• Fight and explore your way through a perilous fantasy world to defeat the dark mage.<br>
+
+• As the game master, you can set up the fights yourself and choose how many monsters to battle.<br></h3>
+         </center>
+      </div>
+   </div>
+     <div class="game_screen commondiv main_div" id="display" >
+      <div class="div_text">
+         <center>
+            <a name="4"></a><h1>First Look</h1>
+            <hr width=200px>
+            <img src="assets/images/screen 2.PNG">
+            <img src="assets/images/screen 1.PNG">
+            <img src="assets/images/screen 3.PNG">
+          </center>
+      </div>
+   </div>
+     <div class="press_review commondiv main_div" id="display" >
+      <div class="div_text">
+         <center>
+            <a name="3"></a><h1>Press Review</h1>
+            <hr width=200px>
+            <h3>Den Of Geeks</h3>
+             <h3>The best version of mario that have existed in the market.<br>Earth Shattering performance. Mind Blowing Vector graphics.</h3>
+         </center>
+      </div>
+   </div>
+     <div class="contact commondiv main_div" id="display" >
+      <div class="div_text">
+         <center>
+            <a name="2"></a><h1>Contact Us</h1>
+            <hr width=200px>
+            <h3>Address </h3>
+            <h3>Contact No.</h3>
+	    <h3>Email</h3>
+         </center>
+      </div>
+</div>
+</body>
+</html>
